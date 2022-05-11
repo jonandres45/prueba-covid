@@ -1,0 +1,15 @@
+.btnUp{
+    position: fixed;
+	bottom: 40px;
+	right: 40px;
+    z-index: 10;
+    font-size: 1.5rem;
+    background: greenyellow;
+    padding: 5px;
+    border: 0;
+    border-radius: 5px;
+    a{
+        text-decoration: none;
+        color: black;
+    }
+}

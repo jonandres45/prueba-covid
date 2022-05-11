@@ -1,4 +1,4 @@
-import React, {useMemo} from 'react';
+import React from 'react';
 import {useSelector} from 'react-redux';
 import {
     Chart as ChartJS,
@@ -24,8 +24,7 @@ ChartJS.register(
     Filler,
 )
 
-const scores = [0];
-const labels = [0];
+
 
 const options = {
     responsive: true,
@@ -37,31 +36,30 @@ const options = {
 };
 
 function Historial(){
-    const valor = useSelector((state)=> state.covid.history);
+    let scores = [0];
+    let labels = [0];
+    let valor = useSelector((state)=> state.covid.history);
     
     for(const property in valor){
         scores.push(valor[property]);
-        labels.push(property);
-        console.log(`${property}: ${valor[property]}`);
+        labels.push(property);        
     }
-    
-    const data = useMemo(function(){        
-        return{
-            datasets:[
-                {
-                    label:'Contagios',
-                    data: scores,
-                    tension: 0.3,
-                    borderColor: "rgb(21, 30, 60)",
-                }
-            ],
-            labels,            
-        };
-    }, []);
+
+    let data = {
+        datasets:[
+            {
+                label:'Contagios',
+                data: scores,
+                tension: 0.3,
+                borderColor: "rgb(21, 30, 60)",
+            }
+        ],
+        labels,            
+    };
 
     return (
         <div className='containerCovid'>
-            
+            <h2>Grafica de contagios desde inicio de pandemia</h2>
             <Line data={data} options={options}></Line>
         </div>
     );    
