@@ -26,4 +26,3 @@ Solo es necesario:
 ## Nota 2
 2.- `Tiene un limite de paises` ya que fueron agregados a mano, para traer los disponibles tendriamos que hacer una consulta más a la API pero el mismo creador nos pide por favor utilizar las menos peticiones posibles :)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
