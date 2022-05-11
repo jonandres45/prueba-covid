@@ -1,0 +1,20 @@
+@import '../assets/_colores.scss';
+
+.fondoPresentacion{
+    height: 100vh;
+    width: 100%;
+    background: $color-principal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenidoPresentacion{
+    color: $letra-clara;
+    text-align: center;
+}
+
+.img-covid{
+    width: 10rem;
+    margin-top: 1rem;
+}

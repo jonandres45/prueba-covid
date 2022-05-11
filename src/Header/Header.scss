@@ -1,0 +1,19 @@
+@import '../assets/var.scss';
+@import '../assets/colores.scss';
+
+header{
+    display: flex;   
+    justify-content: right;
+    background-color: $color-principal;
+    width: 100%;
+    padding-top: 1rem;
+    position: absolute;
+}
+
+.btnPresentacion{
+    @include btn-primary(white, white);
+}
+
+.btnCerrar{
+    @include btn-primary(red, red);
+}

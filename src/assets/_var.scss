@@ -1,0 +1,17 @@
+
+@mixin btn-primary($letra, $borde){
+       background: transparent;
+       color: $letra;
+       border: 1px solid $borde;
+       font-size: 1.5rem;
+       margin-right: 12px;
+       padding: .7rem;
+       cursor: pointer;
+       transition: .3s;
+       border-radius: 10px;
+
+       &:hover{
+           background: rgb(0, 50, 94);
+           transition: .3s;
+       }
+}
