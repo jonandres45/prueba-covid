@@ -56,7 +56,7 @@ export const fetchVaccines = (pais)=>(dispatch)=>{
     API.get(`/vaccines?country=${pais}`)
     .then((response)=>{
         dispatch(handleSpinner());
-        dispatch(setVaccines(response.data.All));
+        dispatch(setVaccines(response.data.Global.All));
     })
     .catch((error)=>console.log(error));
 }
